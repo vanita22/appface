@@ -17,16 +17,30 @@
 <body>
  	<div class="container">
  		<div class="row">
- 			<div class="col-xs-sm-md-lg-12">
- 				<fb:login-button 
-  					scope="public_profile,email"
-  					onlogin="checkLoginState();">
-				</fb:login-button>
+ 			<div class="col-xs-sm-md-lg-12"><div class="fb-like" data-share="true" data-width="450" data-show-faces="true">
+			</div>
  			</div>
  		</div>
  	</div>
 </body>
+<script>
+  window.fbAsyncInit = function() {
+    FB.init({
+      appId      : '152471491968489',
+      xfbml      : true,
+      version    : 'v2.9'
+    });
+    FB.AppEvents.logPageView();
+  };
 
+  (function(d, s, id){
+     var js, fjs = d.getElementsByTagName(s)[0];
+     if (d.getElementById(id)) {return;}
+     js = d.createElement(s); js.id = id;
+     js.src = "//connect.facebook.net/en_US/sdk.js";
+     fjs.parentNode.insertBefore(js, fjs);
+   }(document, 'script', 'facebook-jssdk'));
+</script>
 <!-- jQuery 3.2.1-->
 <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
 <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
